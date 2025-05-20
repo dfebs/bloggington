@@ -1,5 +1,6 @@
 class BlogPostsController < ApplicationController
   def index
+    @blog_posts = Current.user.blog_posts.all
   end
 
   def show
