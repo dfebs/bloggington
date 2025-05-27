@@ -15,12 +15,16 @@ Ruby Version: 3.2 or newer
 ## Current Features
 - [x] Basic login/logout system
 - [x] Create blog posts
+- [x] Add register page with username/email/password
 
 ## To-Do
-- [] Add register page with username/email/password
 - [] Comment on blog posts
 - [] Comment threads
-- [] Finish writing out the rest of the current features/todo
+- [] Delete own blog posts
+- [] Add email verification when registering
+- [] Add tests
 
 ## Nice-to-haves
 - [] Add reactions to comments or posts
+- [] Add some formatting to make the site look better
+- [] Possibly publish this

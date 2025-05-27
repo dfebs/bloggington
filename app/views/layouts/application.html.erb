@@ -23,8 +23,12 @@
   </head>
 
   <body>
+    <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
+    <%= tag.div(flash[:notice], style: "color:green") if flash[:notice] %>
     <%= link_to "Login", new_session_path unless authenticated? %>
     <%= button_to "Logout", session_path, method: :delete if authenticated? %>
+    <%= link_to "Register", new_user_path unless authenticated? %>
+    <%= link_to "Home", root_path %>
     <%= yield %>
   </body>
 </html>
