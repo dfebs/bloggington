@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
   def index
-    @blog_posts = Current.user.blog_posts.all
+    @blog_posts = BlogPost.all
   end
 
   def show
@@ -19,6 +19,16 @@ class BlogPostsController < ApplicationController
       puts "something aint right"
       redirect_to blog_posts_path
       # TODO: use render function instead to indicate unprocessable entity
+    end
+  end
+
+  def destroy
+    @blog_post = BlogPost.find(params[:id])
+    if @blog_post.user == Current.user
+      @blog_post.destroy
+      redirect_to blog_posts_path, notice: "Yay it's deleted"
+    else
+      redirect_to blog_posts_path, alert: "You're not allowed to do that! Bad!"
     end
   end
 

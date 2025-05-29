@@ -8,3 +8,18 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ body {
+    background-color: black;
+    color: white;
+}
+
+a {
+    color: #66ccff;
+}
+
+button {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}

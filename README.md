@@ -16,15 +16,15 @@ Ruby Version: 3.2 or newer
 - [x] Basic login/logout system
 - [x] Create blog posts
 - [x] Add register page with username/email/password
+- [x] Delete own blog posts
 
 ## To-Do
-- [] Comment on blog posts
-- [] Comment threads
-- [] Delete own blog posts
-- [] Add email verification when registering
-- [] Add tests
+- [ ] Comment on blog posts
+- [ ] Comment threads
+- [ ] Add email verification when registering
+- [ ] Add tests
 
 ## Nice-to-haves
-- [] Add reactions to comments or posts
-- [] Add some formatting to make the site look better
-- [] Possibly publish this
+- [ ] Add reactions to comments or posts
+- [ ] Add some formatting to make the site look better
+- [ ] Possibly publish this

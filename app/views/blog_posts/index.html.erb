@@ -2,6 +2,9 @@
 <p>Here be the blog posts<p>
 <% for blog_post in @blog_posts %>
     <h1><%= blog_post.title %></h1>
+    <%= link_to "Go to post", blog_post %>
+    <h2>Written by <%= blog_post.user.username %></h2>
     <%= blog_post.body %>
+    <hr>
 <% end %>
 <%= link_to "Create", new_blog_post_path %>
