@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   resources :passwords, param: :token
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :blog_posts
+  # Since we are commenting _on_ blog posts, we want to set comments
+  # under blog posts, even if they are also technically associated with users
+  resources :blog_posts do
+    resources :comments, only: [ :create ]
+  end
   resources :users, only: [ :new, :create ]
 
   root "blog_posts#index"

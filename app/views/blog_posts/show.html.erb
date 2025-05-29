@@ -1,4 +1,8 @@
 <h1><%= @blog_post.title %></h1>
 <%= @blog_post.body %>
+<%= render "comments/form", blog_post: @blog_post %>
+<% for comment in @blog_post.comments.all %>
+    <%= comment.body %>
+<% end %>
 <%= button_to "Delete Post", @blog_post, method: :delete if Current.user == @blog_post.user %>
 <%= link_to "Home", root_path %>

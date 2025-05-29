@@ -1,4 +1,5 @@
-<%= form_with model: Comment.new do |form| %>
+<%= form_with model: [blog_post, Comment.new] do |form| %>
+    <%= debug blog_post %>
     <div>
         <%= form.label :body, style: "display: block" %>
         <%= form.rich_text_area :body %>
