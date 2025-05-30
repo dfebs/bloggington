@@ -16,9 +16,7 @@ class BlogPostsController < ApplicationController
     if @blog_post.save
       redirect_to @blog_post
     else
-      puts "something aint right"
-      redirect_to blog_posts_path
-      # TODO: use render function instead to indicate unprocessable entity
+      redirect_to blog_posts_path, status: :unprocessable_entity, alert: "failed to make blog post"
     end
   end
 

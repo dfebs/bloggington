@@ -17,10 +17,12 @@ Ruby Version: 3.2 or newer
 - [x] Create blog posts
 - [x] Add register page with username/email/password
 - [x] Delete own blog posts
+- [x] Comment on blog posts
 
 ## To-Do
-- [ ] Comment on blog posts
+- [ ] Profile pictures
 - [ ] Comment threads
+- [ ] Add "are you sure" prompt when deleting anything
 - [ ] Add email verification when registering
 - [ ] Add tests
 
