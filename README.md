@@ -25,6 +25,7 @@ Ruby Version: 3.2 or newer
 - [ ] Add "are you sure" prompt when deleting anything
 - [ ] Add email verification when registering
 - [ ] Add tests
+- [ ] Figure out the multiple-forms-in-one-page issue to add replies
 
 ## Nice-to-haves
 - [ ] Add reactions to comments or posts

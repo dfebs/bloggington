@@ -1,5 +1,8 @@
 <%= form_with model: [blog_post, Comment.new] do |form| %>
     <div>
+        <%= form.hidden_field :comment_id, value: parent&.id %>
+    </div>
+    <div>
         <%= form.label :body, style: "display: block" %>
         <%= form.rich_text_area :body %>
     </div>
