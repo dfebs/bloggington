@@ -1,8 +1,7 @@
 <hr>
 <h1>Comments</h1>
-<% for comment in blog_post.comments.where(parent: nil) %>
-    <h2><%= comment.user.username %></h2>
-    <%= comment.body %>
-<% end %>
-
-<%= render "comments/form", blog_post: blog_post, parent: nil %>
+<div id="comments">
+    <% for comment in blog_post.comments.where(parent: parent) %>
+        <%= render "comments/comment", comment: comment, blog_post: blog_post %>
+    <% end %>
+</div>
