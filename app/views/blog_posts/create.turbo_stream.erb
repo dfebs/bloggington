@@ -1,0 +1,2 @@
+<%= turbo_stream.prepend "blog_posts", partial: "blog_posts/blog_post", locals: { blog_post: @blog_post } %>
+<%= turbo_stream.replace "new_blog_post", partial: "form", locals: { blog_post: BlogPost.new } %>

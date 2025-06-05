@@ -14,7 +14,7 @@ Ruby Version: 3.2 or newer
 
 ## Current Features
 - [x] Basic login/logout system
-- [x] Create blog posts
+- [x] Dynamically create blog posts with turbo
 - [x] Add register page with username/email/password
 - [x] Delete own blog posts
 - [x] Comment on blog posts
@@ -22,10 +22,12 @@ Ruby Version: 3.2 or newer
 ## To-Do
 - [ ] Profile pictures
 - [ ] Comment threads
+- [ ] Dynamically add comments with turbo
+- [ ] Edit (update) Posts 
+- [ ] Edit (update) Comments
 - [ ] Add "are you sure" prompt when deleting anything
 - [ ] Add email verification when registering
 - [ ] Add tests
-- [ ] Figure out the multiple-forms-in-one-page issue to add replies
 
 ## Nice-to-haves
 - [ ] Add reactions to comments or posts

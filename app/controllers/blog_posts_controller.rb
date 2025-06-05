@@ -13,10 +13,14 @@ class BlogPostsController < ApplicationController
 
   def create
     @blog_post = Current.user.blog_posts.new(blog_post_params)
-    if @blog_post.save
-      redirect_to @blog_post
-    else
+    unless @blog_post.save
       redirect_to blog_posts_path, status: :unprocessable_entity, alert: "failed to make blog post"
+      # todo: probably make this fallback better
+    end
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html
     end
   end
 

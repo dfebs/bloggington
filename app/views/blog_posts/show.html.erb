@@ -1,7 +1,1 @@
-<%= button_to "Delete Post", @blog_post, method: :delete if Current.user == @blog_post.user %>
-<h1><%= @blog_post.title %></h1>
-<%= @blog_post.body %>
-
-<%= render "comments/comment_collection", blog_post: @blog_post, parent: nil %>
-<%= render "comments/form", blog_post: @blog_post, parent: nil %>
-<%= link_to "Home", root_path %>
+<%= render @blog_post %>
