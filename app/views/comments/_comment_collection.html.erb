@@ -1,4 +1,4 @@
-<div id="comments">
+<div id="<%= dom_id(blog_post) %>_comments">
     <% for comment in blog_post.comments.where(parent: parent) %>
         <%= render "comments/comment", comment: comment, blog_post: blog_post %>
     <% end %>

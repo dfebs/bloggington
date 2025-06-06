@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
     unless @comment.save
       redirect_to @blog_post, status: :unprocessable_entity, alert: "Failed to make comment"
-      return
+    return
     end
 
     respond_to do |format|
@@ -21,7 +21,8 @@ class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new
-    render partial: "comments/form", locals: { comment: @comment }
+    @blog_post = BlogPost.find(params[:blog_post_id])
+    @parent = params[:parent]
   end
 
   private
