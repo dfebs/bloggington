@@ -18,11 +18,11 @@ Ruby Version: 3.2 or newer
 - [x] Add register page with username/email/password
 - [x] Delete own blog posts
 - [x] Comment on blog posts
+- [x] Dynamically add comments with turbo
 
 ## To-Do
 - [ ] Profile pictures
 - [ ] Comment threads
-- [ ] Dynamically add comments with turbo
 - [ ] Edit (update) Posts 
 - [ ] Edit (update) Comments
 - [ ] Add "are you sure" prompt when deleting anything
