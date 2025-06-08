@@ -1,9 +1,7 @@
 <%= render partial: "blog_posts/content", locals: { blog_post: blog_post } %>
 
 <% if Current.user == blog_post.user %>
-    <%= turbo_frame_tag dom_id(blog_post) do %>
-        <%= link_to "Edit", edit_blog_post_path(blog_post) %>
-    <% end %>
+    <%= render partial: "blog_posts/edit_button", locals: { blog_post: blog_post } %>
 <% end %>
 
 <hr>
