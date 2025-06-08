@@ -1,10 +1,24 @@
 class BlogPostsController < ApplicationController
+  before_action :set_blog_post, only: %i[show edit update destroy]
   def index
     @blog_posts = BlogPost.all
   end
 
   def show
-    @blog_post = BlogPost.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    unless @blog_post.update(blog_post_params)
+      redirect_to blog_posts_path, status: :unprocessable_entity, alert: "failed to edit blog post"
+    end
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html
+    end
   end
 
   def new
@@ -14,7 +28,7 @@ class BlogPostsController < ApplicationController
   def create
     @blog_post = Current.user.blog_posts.new(blog_post_params)
     unless @blog_post.save
-      redirect_to blog_posts_path, status: :unprocessable_entity, alert: "failed to make blog post"
+      redirect_to blog_posts_path, status: :unprocessable_entity, alert: "failed to create blog post"
       # todo: probably make this fallback better
     end
 
@@ -25,7 +39,6 @@ class BlogPostsController < ApplicationController
   end
 
   def destroy
-    @blog_post = BlogPost.find(params[:id])
     if @blog_post.user == Current.user
       @blog_post.destroy
       redirect_to blog_posts_path, notice: "Yay it's deleted"
@@ -37,5 +50,9 @@ class BlogPostsController < ApplicationController
   private
   def blog_post_params
     params.expect blog_post: [ :title, :body ]
+  end
+
+  def set_blog_post
+    @blog_post = BlogPost.find(params[:id])
   end
 end

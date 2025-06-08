@@ -12,18 +12,16 @@ Ruby Version: 3.2 or newer
 1. `bin/rails db:setup`
 1. `bin/rails server`
 
-## Current Features
+## Features
 - [x] Basic login/logout system
 - [x] Dynamically create blog posts with turbo
 - [x] Add register page with username/email/password
 - [x] Delete own blog posts
 - [x] Comment on blog posts
 - [x] Dynamically add comments with turbo
-
-## To-Do
+- [x] Edit (update) posts with turbo
 - [ ] Profile pictures
 - [ ] Comment threads
-- [ ] Edit (update) Posts 
 - [ ] Edit (update) Comments
 - [ ] Add "are you sure" prompt when deleting anything
 - [ ] Add email verification when registering

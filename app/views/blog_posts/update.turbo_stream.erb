@@ -1,0 +1,2 @@
+<%= turbo_stream.replace "#{dom_id(@blog_post)}", partial: "blog_posts/edit_button", locals: { blog_post: @blog_post } %>
+<%= turbo_stream.replace "#{dom_id(@blog_post)}_content", partial: "blog_posts/content", locals: { blog_post: @blog_post } %>

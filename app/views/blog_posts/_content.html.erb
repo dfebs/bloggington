@@ -1,0 +1,12 @@
+<div id="<%= "#{dom_id(blog_post)}_content" %>">
+    <h1>
+        <% if request.path != "/blog_posts" && request.path != "/"  %>
+            <%= blog_post.title %>
+        <% else %>
+            <%= link_to blog_post.title, blog_post %>
+        <% end %>
+    </h1>
+    <p>Written by <%= blog_post.user.username %></p>
+    <%= blog_post.body %>
+    <%= button_to "Delete Post", blog_post, method: :delete if Current.user == blog_post.user %>
+</div>
