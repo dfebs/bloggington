@@ -1,4 +1,24 @@
 class CommentsController < ApplicationController
+  def edit
+    @comment = Comment.find(params[:id])
+    @blog_post = @comment.blog_post
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    @blog_post = @comment.blog_post
+
+    unless @comment.update(comment_params)
+      redirect_to @blog_post, status: :unprocessable_entity, alert: "Failed to update comment"
+      return
+    end
+
+    respond_to do |format|
+      format.turbo_stream
+      format.html
+    end
+  end
+
   def create
     @blog_post = BlogPost.find(params[:blog_post_id])
     @comment = @blog_post.comments.new(comment_params)

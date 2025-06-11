@@ -1,5 +1,5 @@
-<%= turbo_frame_tag "#{dom_id(blog_post)}_add_comment" do %>
-    <%= form_with model: [blog_post, Comment.new] do |form| %>
+<%= turbo_frame_tag comment do %>
+    <%= form_with model: [blog_post, comment] do |form| %>
         <div>
             <%= form.hidden_field :comment_id, value: parent&.id %>
         </div>

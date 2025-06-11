@@ -1,5 +1,4 @@
-
-<h2><%= comment.user.username %></h2>
-<%= comment.body %>
-<%#= render "comments/comment_collection", blog_post: blog_post, parent: comment %>
-<%#= render "comments/form", blog_post: blog_post, parent: comment %>
+<%= render partial: "comments/content", locals: { comment: comment } %>
+<% if Current.user == comment.user %>
+    <%= render partial: "comments/edit_button", locals: { comment: comment, blog_post: blog_post, comment_id: comment.comment_id } %>
+<% end %>
