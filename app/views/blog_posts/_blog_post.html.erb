@@ -1,15 +1,12 @@
 <%= render partial: "blog_posts/content", locals: { blog_post: blog_post } %>
 
 <% if Current.user == blog_post.user %>
-    <%= render partial: "blog_posts/edit_button", locals: { blog_post: blog_post } %>
+    <%= render "blog_posts/edit_button", blog_post: blog_post %>
 <% end %>
 
 <hr>
 
 <h1>Comments</h1>
 <%= render "comments/comment_collection", blog_post: blog_post, parent: nil %>
-<%= turbo_frame_tag "#{dom_id(blog_post)}_add_comment" do %>
-    <%= link_to "Add Comment", new_blog_post_comment_path(blog_post, parent: nil) %>
-<% end %>
-<%#= render "comments/form", blog_post: blog_post, parent: nil %>
+<%= render "comments/new_button", blog_post: blog_post, comment: Comment.new %>
 <hr>

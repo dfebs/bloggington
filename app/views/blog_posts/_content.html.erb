@@ -1,4 +1,4 @@
-<div id="<%= "#{dom_id(blog_post)}_content" %>">
+<div id="<%= dom_id(blog_post, :content) %>">
     <h1>
         <% if request.path != "/blog_posts" && request.path != "/"  %>
             <%= blog_post.title %>
