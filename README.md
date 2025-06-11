@@ -12,22 +12,31 @@ Ruby Version: 3.2 or newer
 1. `bin/rails db:setup`
 1. `bin/rails server`
 
-## Features
+## Done
 - [x] Basic login/logout system
 - [x] Dynamically create blog posts with turbo
 - [x] Add register page with username/email/password
 - [x] Delete own blog posts
 - [x] Comment on blog posts
-- [x] Dynamically add comments with turbo
+- [x] Add comments with turbo
 - [x] Edit (update) posts with turbo
+- [x] Edit (update) comments with turbo
+
+## Todo
+- [ ] Sort comments by descending
+- [ ] Sort blog posts by descending
 - [ ] Profile pictures
-- [ ] Comment threads
-- [ ] Edit (update) Comments
 - [ ] Add "are you sure" prompt when deleting anything
 - [ ] Add email verification when registering
 - [ ] Add tests
+- [ ] Check for potential exploit where someone goes to the edit post/comment path of a post/comment they don't own
+
+## Bugs
+- [ ] You can submit an empty post
+- [ ] Editing a comment will result in a duplicate "edit comment" button
 
 ## Nice-to-haves
 - [ ] Add reactions to comments or posts
 - [ ] Add some formatting to make the site look better
 - [ ] Possibly publish this
+- [ ] Comment threads (This isn't getting done in this timeline)
