@@ -26,7 +26,6 @@ Ruby Version: 3.2 or newer
 
 ## Todo
 - [ ] Profile pictures
-- [ ] Add "are you sure" prompt when deleting anything
 - [ ] Add email verification when registering
 - [ ] Add tests
 - [ ] Check for potential exploit where someone goes to the edit post/comment path of a post/comment they don't own
@@ -41,3 +40,4 @@ Ruby Version: 3.2 or newer
 - [ ] Add some formatting to make the site look better
 - [ ] Possibly publish this
 - [ ] Comment threads (This isn't getting done in this timeline)
+- [ ] Add "are you sure" prompt when deleting anything - can be done with stimulus controller

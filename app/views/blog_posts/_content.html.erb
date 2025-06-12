@@ -6,7 +6,7 @@
             <%= link_to blog_post.title, blog_post %>
         <% end %>
     </h1>
-    <p>Written by <%= blog_post.user.username %></p>
+    <p>Written by <%= link_to blog_post.user.username, user_path(blog_post.user) %></p>
     <%= blog_post.body %>
     <%= button_to "Delete Post", blog_post, method: :delete if Current.user == blog_post.user %>
 </div>
