@@ -23,9 +23,9 @@ Ruby Version: 3.2 or newer
 - [x] Edit (update) comments with turbo
 - [x] Sort comments by descending
 - [x] Sort blog posts by descending
+- [x] Profile pictures
 
 ## Todo
-- [ ] Profile pictures
 - [ ] Add email verification when registering
 - [ ] Add tests
 - [ ] Check for potential exploit where someone goes to the edit post/comment path of a post/comment they don't own

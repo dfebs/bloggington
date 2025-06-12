@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :blog_posts do
     resources :comments, only: [ :new, :create, :edit, :update ]
   end
-  resources :users, only: [ :new, :create, :show ]
+
+  resources :users, only: [ :new, :create, :show, :edit, :update ]
 
   root "blog_posts#index"
 

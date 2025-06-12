@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   allow_unauthenticated_access only: %i[new create]
+  before_action :set_user, only: %i[show edit update]
   def new
     @user = User.new
   end
@@ -14,11 +15,26 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    unless @user.update(user_params)
+      redirect_to user_path(@user), status: :unprocessable_entity, alert: "Unable to update user"
+      return
+    end
+
+    redirect_to user_path(@user)
   end
 
   private
   def user_params
-    params.expect user: [ :username, :email_address, :password, :password_confirmation ]
+    params.expect user: [ :username, :email_address, :password, :password_confirmation, :profile_picture ]
+  end
+
+  def set_user
+    @user = User.find(params[:id])
   end
 end
