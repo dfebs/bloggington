@@ -1,5 +1,5 @@
 <div id="<%= dom_id(blog_post, :comments) %>">
-    <% for comment in blog_post.comments.where(parent: parent) %>
+    <% blog_post.comments.where(parent: parent).order(created_at: :desc).each do |comment| %>
         <%= render "comments/comment", comment: comment, blog_post: blog_post %>
     <% end %>
 </div>

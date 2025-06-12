@@ -1,4 +1,4 @@
-<%= turbo_stream.append dom_id(@blog_post, :comments) do %>
+<%= turbo_stream.prepend dom_id(@blog_post, :comments) do %>
   <%= render "comments/comment", comment: @comment, blog_post: @blog_post %>
 <% end %>
 

@@ -21,9 +21,10 @@ Ruby Version: 3.2 or newer
 - [x] Add comments with turbo
 - [x] Edit (update) posts with turbo
 - [x] Edit (update) comments with turbo
+- [x] Sort comments by descending
 
 ## Todo
-- [ ] Sort comments by descending
+
 - [ ] Sort blog posts by descending
 - [ ] Profile pictures
 - [ ] Add "are you sure" prompt when deleting anything
@@ -34,6 +35,7 @@ Ruby Version: 3.2 or newer
 ## Bugs
 - [ ] You can submit an empty post
 - [ ] Editing a comment will result in a duplicate "edit comment" button
+- [ ] Creating comments on front page is a mess
 
 ## Nice-to-haves
 - [ ] Add reactions to comments or posts
