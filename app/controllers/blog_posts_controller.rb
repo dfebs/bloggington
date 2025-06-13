@@ -1,5 +1,6 @@
 class BlogPostsController < ApplicationController
-  before_action :set_blog_post, only: %i[show edit update destroy]
+  before_action :set_blog_post, only: %i[show]
+  before_action :verify_user, only: %i[edit update destroy]
   def index
     @blog_posts = BlogPost.order(created_at: :desc)
   end
@@ -56,5 +57,12 @@ class BlogPostsController < ApplicationController
 
   def set_blog_post
     @blog_post = BlogPost.find(params[:id])
+  end
+
+  def verify_user
+    set_blog_post
+    if Current.user != @blog_post.user
+      redirect_to root_path, alert: "NO, BAD. You can't edit other user's blog posts"
+    end
   end
 end
