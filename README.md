@@ -24,11 +24,13 @@ Ruby Version: 3.2 or newer
 - [x] Sort comments by descending
 - [x] Sort blog posts by descending
 - [x] Profile pictures
+- [x] Learn that libvips (or similar) is needed for images embedded in Action Text
+- [x] Block users from editing/deleting stuff they don't own
+- [x] Delete comments
 
 ## Todo
 - [ ] Add email verification when registering
 - [ ] Add tests
-- [ ] Check for potential exploit where someone goes to the edit post/comment path of a post/comment they don't own
 
 ## Bugs
 - [ ] You can submit an empty post
