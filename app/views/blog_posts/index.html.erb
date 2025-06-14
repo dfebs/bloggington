@@ -1,7 +1,5 @@
 <h1>All Posts</h1>
-<%= turbo_frame_tag BlogPost.new do %>
-    <%= link_to "New Post", new_blog_post_path %>
-<% end %>
+<%= render "blog_posts/new_button" %>
 
 <div id="blog_posts">
     <%= render @blog_posts %>
