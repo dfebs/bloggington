@@ -33,8 +33,8 @@
           <%= button_to "Logout", session_path, method: :delete if authenticated? %>
           <%= link_to "Register", new_user_path unless authenticated? %>
           <%= link_to "Home", root_path %>
-          <% if Current.user %>
-            <p>Welcome <%= Current.user.username %><p>
+          <% if authenticated? %>
+            <p>Welcome <%= link_to Current.user.username, user_path(Current.user) %><p>
           <% end %>
           <%= yield %>
         </div>

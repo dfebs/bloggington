@@ -3,7 +3,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show]
   before_action :verify_user, only: %i[edit update]
   def new
-    @user = User.new
+    if authenticated?
+      redirect_back fallback_location: root_path, alert: "You can't register if you're already logged in!"
+    else
+      @user = User.new
+    end
   end
 
   def create
@@ -39,7 +43,9 @@ class UsersController < ApplicationController
   end
 
   def verify_user
+    Rails.logger.debug "Current.session BEFORE: #{Current.session.inspect}"
     set_user
+    Rails.logger.debug "Current.session AFTER: #{Current.session.inspect}"
     if Current.user != @user
       redirect_to root_path, alert: "NO, BAD. You can't edit other user data"
     end
