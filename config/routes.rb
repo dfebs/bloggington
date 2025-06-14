@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # Since we are commenting _on_ blog posts, we want to set comments
   # under blog posts, even if they are also technically associated with users
   resources :blog_posts do
-    resources :comments, only: [ :new, :create, :edit, :update ]
+    resources :comments, only: [ :new, :create, :edit, :update, :destroy ]
   end
 
   resources :users, only: [ :new, :create, :show, :edit, :update ]

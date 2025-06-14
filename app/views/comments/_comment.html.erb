@@ -1,4 +1,6 @@
 <%= render partial: "comments/content", locals: { comment: comment } %>
 <% if Current.user == comment.user %>
     <%= render partial: "comments/edit_button", locals: { comment: comment, blog_post: blog_post, comment_id: comment.comment_id } %>
+    <%= button_to "Delete Comment", blog_post_comment_path(blog_post, comment), method: :delete %>
 <% end %>
+

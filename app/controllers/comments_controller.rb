@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :verify_user, only: %i[ update edit destroy ]
   def edit
     @comment = Comment.find(params[:id])
     @blog_post = @comment.blog_post
@@ -16,6 +17,14 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.turbo_stream
       format.html
+    end
+  end
+
+  def destroy
+    if @comment.destroy
+      redirect_back fallback_location: root_path, notice: "Yay it's deleted"
+    else
+      redirect_back fallback_location: root_path, alert: "Failed to delete comment"
     end
   end
 
@@ -48,5 +57,12 @@ class CommentsController < ApplicationController
   private
   def comment_params
     params.expect comment: [ :body, :comment_id ]
+  end
+
+  def verify_user
+    @comment = Comment.find(params[:id])
+    if Current.user != @comment.user
+      redirect_to root_path, alert: "NO, BAD. You can't edit other user's comments"
+    end
   end
 end
