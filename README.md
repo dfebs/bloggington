@@ -31,11 +31,13 @@ Ruby Version: 3.2 or newer
 ## Todo
 - [ ] Add email verification when registering
 - [ ] Add tests
+- [ ] Add date posts and comments created
+- [ ] Default profile pics
 
 ## Bugs
-- [ ] You can submit an empty post
-- [ ] Editing a comment will result in a duplicate "edit comment" button
-- [ ] Creating comments on front page is a mess
+- [x] You can submit an empty post
+- [x] Editing a comment will result in a duplicate "edit comment" button
+- [x] Creating comments on front page is a mess
 
 ## Nice-to-haves
 - [ ] Add reactions to comments or posts
