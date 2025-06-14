@@ -42,11 +42,10 @@ class BlogPostsController < ApplicationController
   end
 
   def destroy
-    if @blog_post.user == Current.user
-      @blog_post.destroy
+    if @blog_post.destroy
       redirect_to blog_posts_path, notice: "Yay it's deleted"
     else
-      redirect_to blog_posts_path, alert: "You're not allowed to do that! Bad!"
+      redirect_back fallback_location: root_path, alert: "Failed to delete blog post"
     end
   end
 
