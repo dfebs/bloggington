@@ -1,4 +1,4 @@
-<%= turbo_frame_tag comment do %>
+<%= turbo_frame_tag combined_dom_id(blog_post, comment) do %>
     <%= form_with model: [blog_post, comment] do |form| %>
         <div>
             <%= form.hidden_field :comment_id, value: parent&.id %>

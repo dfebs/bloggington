@@ -2,4 +2,4 @@
   <%= render "comments/comment", comment: @comment, blog_post: @blog_post %>
 <% end %>
 
-<%= turbo_stream.replace "new_comment", partial: "comments/new_button", locals: { comment: Comment.new, parent: nil, blog_post: @blog_post } %>
+<%= turbo_stream.replace combined_dom_id(@blog_post, Comment.new), partial: "comments/new_button", locals: { comment: Comment.new, parent: nil, blog_post: @blog_post } %>
