@@ -27,17 +27,17 @@ Ruby Version: 3.2 or newer
 - [x] Learn that libvips (or similar) is needed for images embedded in Action Text
 - [x] Block users from editing/deleting stuff they don't own
 - [x] Delete comments
+- [x] Add date to posts and comments
 
-## Todo
-- [ ] Add email verification when registering
-- [ ] Add tests
-- [ ] Add date posts and comments created
-- [ ] Default profile pics
-
-## Bugs
+## Known Bugs (Checkmark indicates fixed)
 - [x] You can submit an empty post
 - [x] Editing a comment will result in a duplicate "edit comment" button
 - [x] Creating comments on front page is a mess
+
+## Todo
+- [ ] Add tests
+- [ ] Default profile pics
+- [ ] Include profile pics in posts/comments
 
 ## Nice-to-haves
 - [ ] Add reactions to comments or posts
@@ -45,3 +45,4 @@ Ruby Version: 3.2 or newer
 - [ ] Possibly publish this
 - [ ] Comment threads (This isn't getting done in this timeline)
 - [ ] Add "are you sure" prompt when deleting anything - can be done with stimulus controller
+- [ ] Add email verification when registering
