@@ -28,6 +28,8 @@ Ruby Version: 3.2 or newer
 - [x] Block users from editing/deleting stuff they don't own
 - [x] Delete comments
 - [x] Add date to posts and comments
+- [x] Default profile pics
+- [x] Include profile pics in posts/comments
 
 ## Known Bugs (Checkmark indicates fixed)
 - [x] You can submit an empty post
@@ -36,8 +38,6 @@ Ruby Version: 3.2 or newer
 
 ## Todo
 - [ ] Add tests
-- [ ] Default profile pics
-- [ ] Include profile pics in posts/comments
 
 ## Nice-to-haves
 - [ ] Add reactions to comments or posts

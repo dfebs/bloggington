@@ -1,5 +1,5 @@
 <div id="<%= dom_id(comment, :content) %>">
-    <h2><%= comment.user.username %></h2>
+    <h2><%= profile_picture comment.user, 50 %><%= comment.user.username %></h2>
     <p><%= comment.created_at.to_date %></p>
     <% if comment.body.empty? %>
         <p>No Content</p>
