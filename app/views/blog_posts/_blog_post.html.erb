@@ -4,8 +4,6 @@
     <%= render "blog_posts/edit_button", blog_post: blog_post %>
 <% end %>
 
-<hr>
-
 <h1>Comments</h1>
 <%= render "comments/new_button", blog_post: blog_post, comment: Comment.new %>
 <%= render "comments/comment_collection", blog_post: blog_post, parent: nil %>

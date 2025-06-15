@@ -4,3 +4,7 @@
 <% if Current.user == @user %>
     <%= link_to "Edit Profile", edit_user_path(@user) %>
 <% end %>
+
+<h1>Posts by <%= @user.username %></h1>
+
+<%= render @blog_posts %>

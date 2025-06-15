@@ -20,6 +20,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @blog_posts = @user.blog_posts
   end
 
   def edit
