@@ -1,6 +1,6 @@
 
 <h1><%= @user.username %></h1>
-<%= image_tag @user.profile_picture, style: "max-width: 200px;" if @user.profile_picture.attached?  %>
+<%= profile_picture @user, 200 %>
 <% if Current.user == @user %>
     <%= link_to "Edit Profile", edit_user_path(@user) %>
 <% end %>

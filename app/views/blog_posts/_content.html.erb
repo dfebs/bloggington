@@ -6,6 +6,7 @@
             <%= link_to blog_post.title, blog_post %>
         <% end %>
     </h1>
+    <%= profile_picture blog_post.user, 100 %>
     <p>Written by <%= link_to blog_post.user.username, user_path(blog_post.user) %> - <%= blog_post.created_at.to_date %></p>
     <% if blog_post.body.empty? %>
         <p>No Content</p>
