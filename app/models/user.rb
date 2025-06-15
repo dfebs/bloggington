@@ -5,7 +5,14 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one_attached :profile_picture
 
+  include EmailAddressVerification
+  has_email_address_verification
+
   validate :valid_image
+
+  def verify
+    update(verified: true)
+  end
 
   def valid_image
     return unless profile_picture.attached?

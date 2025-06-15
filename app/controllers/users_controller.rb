@@ -12,11 +12,18 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
-      redirect_to new_session_path, notice: "User created!"
+    start_new_session_for(@user)
+
+    if @user.save!
+      UserMailer.verify_email_address(@user).deliver_later
     else
-      redirect_to new_user_path, alert: "User failed to be created!"
+      redirect_to root_path, alert: "that shid ain't work"
     end
+    # if @user.save
+    #   redirect_to new_session_path, notice: "User created!"
+    # else
+    #   redirect_to new_user_path, alert: "User failed to be created!"
+    # end
   end
 
   def show

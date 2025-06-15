@@ -9,6 +9,12 @@ Rails.application.routes.draw do
     resources :comments, only: [ :new, :create, :edit, :update, :destroy ]
   end
 
+  resources :email_address_verifications, only: [ :show ], param: :token do
+    collection do
+      post "resend"
+    end
+  end
+
   resources :users, only: [ :new, :create, :show, :edit, :update ]
 
   root "blog_posts#index"
