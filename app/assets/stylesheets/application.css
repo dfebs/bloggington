@@ -8,3 +8,31 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+trix-editor {
+  background-color: #212529;
+  color: white;
+  border: 1px solid #444;
+  padding: 1rem;
+}
+
+trix-editor a {
+  color: #66bfff;
+}
+
+trix-editor [data-trix-placeholder] {
+  color: #aaa;
+}
+
+.trix-button-group {
+  background-color: #2c2c2c;
+  border-color: #444;
+}
+
+.trix-button {
+  color: white;
+}
+
+.trix-button--icon::before {
+  filter: invert(100%);
+}
