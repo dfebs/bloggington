@@ -36,3 +36,12 @@ trix-editor [data-trix-placeholder] {
 .trix-button--icon::before {
   filter: invert(100%);
 }
+
+.trix-content pre {
+  background-color: #32383e;
+  color: #f8f9fa;
+  padding: 1em;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: monospace;
+}
