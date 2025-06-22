@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @blog_posts = @user.blog_posts
+    @blog_posts = @user.blog_posts.order(created_at: :desc)
   end
 
   def edit
