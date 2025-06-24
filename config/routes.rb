@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :comments, only: [ :new, :create, :edit, :update, :destroy ]
   end
 
-  resources :users, only: [ :new, :create, :show, :edit, :update ]
+  resources :users, only: [ :show, :edit, :update ]
 
   root "blog_posts#index"
 

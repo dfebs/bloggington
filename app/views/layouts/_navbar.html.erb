@@ -8,9 +8,6 @@
             <li class="nav-item">
             <%= link_to "Login", new_session_path, class: "nav-link" %>
             </li>
-            <li class="nav-item">
-            <%= link_to "Register", new_user_path, class: "nav-link" %>
-            </li>
         <% else %>
             <li class="nav-item">
             <%= button_to "Logout", session_path, method: :delete, class: "btn btn-link nav-link", form: { class: "d-inline" } %>
