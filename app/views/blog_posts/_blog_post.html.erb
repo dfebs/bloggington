@@ -1,4 +1,4 @@
-<%= render partial: "blog_posts/content", locals: { blog_post: blog_post } %>
+<%= render "blog_posts/content", blog_post: blog_post %>
 
 <% if Current.user == blog_post.user %>
     <%= render "blog_posts/edit_button", blog_post: blog_post %>

@@ -1,6 +1,7 @@
 <h1>All Posts</h1>
 <%= render "blog_posts/new_button" %>
 <hr>
+<%= turbo_stream_from "blog_posts" %>
 <div id="blog_posts">
     <%= render @blog_posts %>
 </div>
